@@ -1,13 +1,17 @@
-function clearScreen() {
-    document.getElementById("result").value = "";
-    }
-    
-    function display(value) {
-    document.getElementById("result").value += value;
-    }
-    
-    function calculate() {
-    var p = document.getElementById("result").value;
-    var q = eval(p);
-    document.getElementById("result").value = q;
-    }
+let result = document.getElementById("result") ;
+ 
+function display(num){
+    result.value += num;
+}
+function calculate(){
+try{
+    result.value = eval(result.value);
+}
+catch(err){
+    alert("invalid")
+}
+}
+function clearScreen(){
+    result.value ="";
+}
+
